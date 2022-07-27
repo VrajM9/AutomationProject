@@ -14,8 +14,8 @@ public class JavaScriptExecutorEx extends Baseclass {
 		JavascriptExecutor js=(JavascriptExecutor) driver;
 		WebElement signinbtn=driver.findElement(By.xpath("//input[@value=\"Sign In\"]"));
 		js.executeScript("arguments[0].click();",signinbtn);
-		System.out.println(js.executeScript("return document.Domain"));
-		System.out.println(js.executeScript("return document.URl"));
+		System.out.println(js.executeScript("return document.Domain;"));
+		System.out.println(js.executeScript("return document.URl;"));
 		Util.waitTobeVisible(By.xpath(("//*[@id=\"ui-id-1-1\"]/div[1]/h4/span")));
 		js.executeScript("window.scrollBy(0,250);");
 	}
