@@ -45,11 +45,11 @@ public static void fluentWait(final WebElement element)
  {
 	 if (Expectedresult.equals(ActualResult))
 	 {
-		 System.out.println("Expected result "+Expectedresult+" matching to actual result "+ActualResult+" Test passed"); 
+		 System.out.println("Expected result:' "+Expectedresult+" 'matching to actual result:' "+ActualResult+" 'Test passed"); 
 	 }
 	 else
 	 {
-		throw new Exception("Expected result "+Expectedresult+" is not matching to actual result "+ActualResult+" Test failed"); 
+		throw new Exception("Expected result:' "+Expectedresult+" 'is not matching to actual result:' "+ActualResult+" 'Test passed"); 
 	 }
  }
 }

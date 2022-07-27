@@ -27,14 +27,17 @@ if (ifuser)
     driver.findElement(By.id("btnSave")).click();
     return empdetails;
 }
-public void searchEmp(String firstname,String empid)
-{
+public void searchEmp(Map<String,Object> empdetails )
+{ Object firstname= empdetails.get("firstname");
+Object empid=empdetails.get("empid");
+String firstname1=(String)firstname;
+String empid1=(String)empid;
 	driver.findElement(By.id("menu_pim_viewEmployeeList")).click();
 	WebElement firstnametextfield=driver.findElement(By.id("empsearch_employee_name_empName"));
 	firstnametextfield.click();
 	firstnametextfield.clear();
-	firstnametextfield.sendKeys(firstname);
-	driver.findElement(By.id("empsearch_id")).sendKeys(empid);
+	firstnametextfield.sendKeys(firstname1);
+	driver.findElement(By.id("empsearch_id")).sendKeys(empid1);
 	driver.findElement(By.id("searchBtn")).click();
 }
 public void editEmp()
