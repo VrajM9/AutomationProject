@@ -16,7 +16,7 @@ import com.google.common.base.Function;
 public class Util extends Baseclass {
 public static void waitTobeClickable(By element)
 {
-	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
 	wait.until(ExpectedConditions.elementToBeClickable(element));
 }
 public static void waitTobeVisible(By element)

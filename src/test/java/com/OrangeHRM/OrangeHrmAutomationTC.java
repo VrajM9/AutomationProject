@@ -1,6 +1,8 @@
 package com.OrangeHRM;
 
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -16,7 +18,13 @@ public class OrangeHrmAutomationTC extends Baseclass {
 		loginpage.login("Admin", "admin123");
 		EmpListPage emplistpage=new EmpListPage();
 Map<String,Object> employeedetails=emplistpage.addEmp("Donald", "Trump", false, null, null);
-
+Set employee=employeedetails.entrySet();
+Iterator i=employee.iterator();
+while(i.hasNext())
+{
+	String empname=(String)i.next();
+	Util.validation(empname, "Donald");
+}
 emplistpage.searchEmp(employeedetails);
 String addedempid=driver.findElement(By.xpath("//div[@id=\"tableWrapper\"]/descendant::td[2]/a")).getText();
 String addedfirstname=driver.findElement(By.xpath("//div[@id=\"tableWrapper\"]/descendant::td[3]/a")).getText();
