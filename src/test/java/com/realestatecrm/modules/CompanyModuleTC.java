@@ -17,7 +17,7 @@ public class CompanyModuleTC extends Baseclass {
 	 driver.get(url);
 	 loginpage.login(username,password);
  }
- @Test(priority=1)
+ @Test(priority=1,groups=("agilecrmTC"))
  public void addCompany() throws Exception
  {   Util.waitTobeClickable(By.id("companiesmenu"));
    	driver.findElement(By.id("companiesmenu")).click();
@@ -30,7 +30,7 @@ public class CompanyModuleTC extends Baseclass {
 	String companyname=driver.findElement(By.id("company-name-text")).getText();
 	Util.validation("BajajFinsv", companyname);
  }	
- @Test(priority=2,dependsOnMethods="addCompany")
+ @Test(priority=2,dependsOnMethods="addCompany",groups=("agilecrmTC"))
  public void deletcompany()
  {    Util.waitTobeClickable(By.id("companiesmenu"));
 	 driver.findElement(By.id("companiesmenu")).click();

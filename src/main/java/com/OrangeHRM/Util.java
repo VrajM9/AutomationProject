@@ -21,7 +21,7 @@ public static void waitTobeClickable(By element)
 }
 public static void waitTobeVisible(By element)
 {
-	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(30));
 	wait.until(ExpectedConditions.visibilityOfElementLocated(element));
 }
 public static void fluentWait(final WebElement element)

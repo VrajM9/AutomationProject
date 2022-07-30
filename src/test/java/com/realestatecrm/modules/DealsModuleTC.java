@@ -9,7 +9,7 @@ import com.OrangeHRM.Util;
 import com.realestatecrm.loginPages.LoginPage;
 
 public class DealsModuleTC extends Baseclass {
-  @Test(priority=1)
+  @Test(priority=1,groups=("agilecrmTC"))
   public void addDeals() throws Exception {
 	  Util.waitTobeClickable(By.id("dealsmenu"));
 	  driver.findElement(By.id("dealsmenu")).click();
@@ -22,7 +22,7 @@ public class DealsModuleTC extends Baseclass {
 	  Util.validation("Test123", dealname);
   }
   
-  @Test(priority=2,dependsOnMethods="addDeals")
+  @Test(priority=2,dependsOnMethods="addDeals",groups=("agilecrmTC"))
   public void deletDeal() {
 //   WebElement deal=driver.findElement(By.xpath("//div[@id=\"New-list-container\"]/descendant::div[2]"));
 //	  Actions action=new Actions(driver);
