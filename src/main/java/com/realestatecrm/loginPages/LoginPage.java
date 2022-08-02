@@ -2,8 +2,8 @@ package com.realestatecrm.loginPages;
 
 import org.openqa.selenium.By;
 
-import com.OrangeHRM.Baseclass;
-import com.OrangeHRM.Util;
+import com.OrangeHRMTC.Baseclass;
+import com.OrangeHRMTC.Util;
 
 public class LoginPage extends Baseclass {
 	public void login(String username,String password)

@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
-import com.OrangeHRM.Baseclass;
-import com.OrangeHRM.Util;
+import com.OrangeHRMTC.Baseclass;
+import com.OrangeHRMTC.Util;
 import com.realestatecrm.loginPages.LoginPage;
 
 public class DealsModuleTC extends Baseclass {

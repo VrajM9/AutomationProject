@@ -1,4 +1,4 @@
-package com.OrangeHRM;
+package com.OrangeHRMTC;
 
 /**
  * Hello world!

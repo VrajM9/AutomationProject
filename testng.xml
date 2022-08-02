@@ -3,8 +3,8 @@
 <suite name="Suite">
 <groups>
 <run>
-<include name="OrnagehrmTC"></include>
-<exclude name="agilecrmTC"></exclude>
+<include name="agilecrmTC"></include>
+<exclude name="OrnagehrmTC"></exclude>
 </run>
 </groups>
   <test thread-count="5" name="AgileCRMtest1">

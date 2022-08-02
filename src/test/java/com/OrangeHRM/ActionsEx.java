@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import com.OrangeHRMTC.Baseclass;
+
 public class ActionsEx extends Baseclass{
 
 	public static void main(String[] args) {

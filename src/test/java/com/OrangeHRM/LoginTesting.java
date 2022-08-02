@@ -2,6 +2,8 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import com.OrangeHRMTC.Baseclass;
+
 public class LoginTesting extends Baseclass {
 
 	public static void login(String username, String password) throws Exception

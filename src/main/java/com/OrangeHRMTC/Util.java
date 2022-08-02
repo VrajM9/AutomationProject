@@ -1,4 +1,4 @@
-package com.OrangeHRM;
+package com.OrangeHRMTC;
 
 import java.time.Duration;
 
