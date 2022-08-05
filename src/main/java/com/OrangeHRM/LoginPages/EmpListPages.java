@@ -6,10 +6,11 @@ import org.openqa.selenium.WebElement;
 import com.OrangeHRMTC.Baseclass;
 
 public class EmpListPages extends Baseclass
-{
+{   By pimmodule=By.xpath("//*[@id=\"menu_pim_viewPimModule\"]/b");
+    By emplisttab=By.id("menu_pim_viewEmployeeList");
 		public Map<String,Object> addEmp(String firstName,String lastName,boolean ifuser,String username,String password) throws Exception
 		{
-		driver.findElement(By.xpath("//*[@id=\"menu_pim_viewPimModule\"]/b")).click();
+		driver.findElement(pimmodule).click();
 		driver.findElement(By.id("btnAdd")).click();
 		driver.findElement(By.id("firstName")).sendKeys(firstName);
 		driver.findElement(By.xpath("//*[@id=\"lastName\"]")).sendKeys(lastName);
@@ -32,7 +33,7 @@ public class EmpListPages extends Baseclass
 		Object empid=empdetails.get("empid");
 		String firstname1=(String)firstname;
 		String empid1=(String)empid;
-			driver.findElement(By.id("menu_pim_viewEmployeeList")).click();
+			driver.findElement(emplisttab).click();
 			WebElement firstnametextfield=driver.findElement(By.id("empsearch_employee_name_empName"));
 			firstnametextfield.click();
 			firstnametextfield.clear();

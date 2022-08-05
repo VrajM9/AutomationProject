@@ -21,7 +21,6 @@ public class DealsModuleTC extends Baseclass {
 	  String dealname=driver.findElement(By.xpath("//ul[@id=\"deals-by-paging-relax-model-list\"]/descendant::a[1]")).getText();
 	  Util.validation("Test123", dealname);
   }
-  
   @Test(priority=2,dependsOnMethods="addDeals",groups=("agilecrmTC"))
   public void deletDeal() {
 //   WebElement deal=driver.findElement(By.xpath("//div[@id=\"New-list-container\"]/descendant::div[2]"));
@@ -31,7 +30,7 @@ public class DealsModuleTC extends Baseclass {
   @AfterClass()
   public void afterclass()
   {
-  	 LoginPage loginpage=new LoginPage();
+  	  LoginPage loginpage=new LoginPage();
        loginpage.logout();
          driver.quit();
   }

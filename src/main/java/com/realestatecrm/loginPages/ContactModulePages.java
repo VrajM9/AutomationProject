@@ -6,15 +6,15 @@ import com.OrangeHRMTC.Baseclass;
 import com.OrangeHRMTC.Util;
 
 public class ContactModulePages extends Baseclass{
-	public void addContact(String firstname,String lastname,String phoneno)
+	public void addContact(String firstname,String email,String phoneno)
 	{     
-		Util.waitTobeClickable(By.id("contactsmenu"));
-		driver.findElement(By.id("contactsmenu")).click();
+	   Util.waitTobeClickable(By.id("contactsmenu"));
+	   driver.findElement(By.id("contactsmenu")).click();
 	   Util.waitTobeClickable(By.xpath("//div[@id=\"view-list\"]/descendant::i"));
 	   driver.findElement(By.xpath("//div[@id=\"view-list\"]/descendant::i")).click();
 	   Util.waitTobeClickable(By.id("fname"));
 	   driver.findElement(By.id("fname")).sendKeys(firstname);
-	   driver.findElement(By.id("lname")).sendKeys(lastname);
+	   driver.findElement(By.id("email")).sendKeys(email);
 	   driver.findElement(By.id("phone")).sendKeys(phoneno);
 	   driver.findElement(By.id("person_validate")).click();
 	   driver.navigate().refresh();
