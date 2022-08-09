@@ -1,4 +1,4 @@
-package com.realestatecrm.modules.ContactModuleTC;
+package com.realestatecrm.modules;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

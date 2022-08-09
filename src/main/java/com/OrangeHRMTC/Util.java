@@ -52,4 +52,34 @@ public static void fluentWait(final WebElement element)
 		throw new Exception("Expected result:' "+Expectedresult+" 'is not matching to actual result:' "+ActualResult+" 'Test passed"); 
 	 }
  }
+ 
+          public static void click(By element)
+          {
+        	Util.waitTobeClickable(element);  
+        	driver.findElement(element).click();
+          }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-package com.realestatecrm.modules;
+package com.realestatecrm;
 
 import java.io.IOException;
 

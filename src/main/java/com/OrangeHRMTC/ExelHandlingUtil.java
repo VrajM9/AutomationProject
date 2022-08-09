@@ -90,24 +90,35 @@ public class ExelHandlingUtil {
 		     return null;		
 	}
 }
-	public void setExcelData(String filepath,String sheetname,int rowindex,int cellindex, String value) throws IOException {
+	public void setExcelData(String filepath,String sheetname,int rowindex,int cellindex, Object value) throws IOException {
 		getInstanceOfWorkbook(filepath);
 		getSheetInstance(sheetname);
-		 int totalRows=sheet.getPhysicalNumberOfRows();
-		 if (totalRows== 0)
-		 {
-			 cell=sheet.createRow(rowindex).createCell(cellindex);
-			 cell.setCellValue(value);
-		 }
-		 else 
-		 {
-			 cell=sheet.getRow(rowindex).getCell(cellindex);
-			 cell.setCellValue(value);
-		 }
+		
+		if(Objects.isNull(sheet.getRow(rowindex))) {
+			cell=sheet.createRow(rowindex).createCell(cellindex);
+			cell.setCellValue((String)value);
+		}
+	    else {
+	    	cell=sheet.getRow(rowindex).getCell(cellindex);
+			cell.setCellValue((String)value);	
+		}
+//		
+//		 int totalRows=sheet.getPhysicalNumberOfRows();
+//		 { if (totalRows==0)
+//		 {
+//			 cell=sheet.createRow(rowindex).createCell(cellindex);
+//			 cell.setCellValue(value);
+//		 }
+//		 else 
+//		 {
+//			 cell=sheet.getRow(rowindex).getCell(cellindex);
+//			 cell.setCellValue(value);
+//		 }
+//		 }
 		 FileOutputStream fos=new FileOutputStream(filepath);
 		 wb.write(fos);
 		 wb.close();
-		 
-		
 	}
- }
+}
+	
+ 

@@ -8,24 +8,24 @@ import com.OrangeHRMTC.Baseclass;
 import com.OrangeHRMTC.Util;
 
 public class CompanyModulePages extends Baseclass {
-	By companyMenu=By.id("companiesmenu");
-	By addCompanyButton=By.xpath("//div[@id=\"view-list\"]/button[1]/i");
-	By companyNameTextField=By.xpath("//input[@id=\"company_name\"]");
-	By companyUrlTextField=By.xpath("//input[@id=\"company_url\"]");
-	By savebutton=By.id("company_validate");
-	By kebabMenu=By.xpath("//tbody[@id=\"companies-list-view-model-list\"]/descendant::a[1]");
-	By editButton=By.xpath("//i[@class=\"material-icons edit\"]");
-	By phonenoTextField=By.id("phone");
-	By updateButton=By.id("company-update");
-	By KebabMenuInCompanyPage=By.xpath("//i[contains(@class,\"material-icons more\")]");
-	By DeleteButton=By.id("company-actions-delete");
-	By YesButton=By.id("success_callback");
+	public By companyMenu=By.id("companiesmenu");
+	public By addCompanyButton=By.xpath("//div[@id=\"view-list\"]/button[1]/i");
+	public By companyNameTextField=By.xpath("//input[@id=\"company_name\"]");
+	public By companyUrlTextField=By.xpath("//input[@id=\"company_url\"]");
+	public By savebutton=By.id("company_validate");
+	public By kebabMenu=By.xpath("//tbody[@id=\"companies-list-view-model-list\"]/descendant::a[1]");
+	public By editButton=By.xpath("//i[@class=\"material-icons edit\"]");
+	public By phonenoTextField=By.id("phone");
+	public By updateButton=By.id("company-update");
+	public By KebabMenuInCompanyPage=By.xpath("//i[contains(@class,\"material-icons more\")]");
+	public By DeleteButton=By.id("company-actions-delete");
+	public By YesButton=By.id("success_callback");
 	
 	public void addCompany(String companyname, String companywebsite)
 	 {  
 	   	driver.findElement(companyMenu).click();
 	   	driver.findElement(addCompanyButton).click();
-	    Util.waitTobeClickable(By.xpath("//input[@id=\"company_name\"]"));
+	    Util.waitTobeClickable(companyNameTextField);
 	   	driver.findElement(companyNameTextField).sendKeys(companyname);
 	   	driver.findElement(companyUrlTextField).sendKeys(companywebsite);
 	   	driver.findElement(savebutton).click();
@@ -35,8 +35,7 @@ public class CompanyModulePages extends Baseclass {
 		 Util.waitTobeClickable(companyMenu);
 		 driver.findElement(companyMenu).click();
 		 driver.findElement(kebabMenu).click();
-		 Util.waitTobeClickable(editButton);
-		 driver.findElement(editButton).click();
+		 Util.click(editButton);
 		switch(type)
 		{
 		case "phone":
@@ -48,14 +47,13 @@ public class CompanyModulePages extends Baseclass {
 		case "Dropdown":
 			WebElement countryDropDown=driver.findElement(By.id("country"));
 			Select select=new Select(countryDropDown);
-			select.selectByIndex(index);	
+			select.selectByIndex(index);
 	 }
 		 driver.findElement(updateButton).click();
 	 }
 	public void deletCompany()
 	 {   driver.findElement(companyMenu);
-		 driver.findElement(KebabMenuInCompanyPage).click();
-		 Util.waitTobeClickable(DeleteButton);
+		Util.click(KebabMenuInCompanyPage);
 		 driver.findElement(DeleteButton).click();
 		 driver.findElement(YesButton).click();
 	 }

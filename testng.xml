@@ -7,31 +7,31 @@
 <exclude name="OrnagehrmTC"></exclude>
 </run>
 </groups>
-  <test thread-count="5" name="AgileCRMtest1">
-  <parameter name="username" value="john123@yopmail.com"></parameter>
-  <parameter name="password" value="john123"></parameter>
-  <parameter name="url" value="https://john6687.agilecrm.com/"></parameter>
+<listeners>
+<listener class-name="com.Listeners.TestListeners"></listener>
+</listeners>
+  <test thread-count="5" name="AgileCRMtest1" parallel="false" enabled="true" >
   <parameter name="browser" value="chrome"></parameter>
   <classes>
-  <class name="com.realestatecrm.modules.CompanyModuleTC"></class>
+  <class name="com.realestatecrm.modules.CompanyModuleTC"></class><!-- Company module TestCases -->
   </classes>
-  </test>
-  <test thread-count="5" name="AgileCRMtest3">
+   </test>
+  <test thread-count="5" name="AgileCRMtest3" enabled="false" >
   <classes>
-  <class name="com.realestatecrm.modules.DealsModuleTC"></class>
+  <class name="com.realestatecrm.modules.DealsModuleTC"></class><!-- Deals module TestCases -->
   </classes>
   </test> 
-   <test thread-count="5" name="AgileCRMtest2">
+<test thread-count="5" name="AgileCRMtest2" enabled="false">
   <classes>
-  <class name="com.realestatecrm.modules.ContactsModuleTC"></class>
+  <class name="com.realestatecrm.modules.ContactsModuleTC"></class><!-- contact module TestCases -->
   </classes>
    </test>
   <test thread-count="5" name="OrnageHrmtest1">
-    <parameter name="username" value="Admin"></parameter>
-    <parameter name="password" value="admin123"></parameter>
-      <parameter name="browser" value="chrome"></parameter>
-       <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"></parameter>
-        <parameter name="ifuser" value="false"></parameter>
+   <parameter name="username" value="Admin"></parameter>
+   <parameter name="password" value="admin123"></parameter>
+   <parameter name="browser" value="chrome"></parameter>
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"></parameter>
+    <parameter name="ifuser" value="false"></parameter>
   <classes>
   <class name="com.OrangeHRM.pmi.AddempTC"></class>
   </classes>
