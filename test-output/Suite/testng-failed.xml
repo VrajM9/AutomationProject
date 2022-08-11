@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="AgileCRMtest1(failed)">
+    <parameter name="password" value="Test1234"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://realestateautomation.agilecrm.com/login"/>
+    <parameter name="username" value="automation@yopmail.com"/>
+    <classes>
+      <class name="com.realestatecrm.modules.CompanyModuleTC">
+        <methods>
+          <include name="deletcompany"/>
+          <include name="addCompany"/>
+          <include name="beforeclass"/>
+        </methods>
+      </class> <!-- com.realestatecrm.modules.CompanyModuleTC -->
+    </classes>
+  </test> <!-- AgileCRMtest1(failed) -->
+  <test thread-count="5" name="AgileCRMtest2(failed)">
+    <classes>
+      <class name="com.realestatecrm.modules.ContactsModuleTC">
+        <methods>
+          <include name="deletContact"/>
+          <include name="addContact"/>
+        </methods>
+      </class> <!-- com.realestatecrm.modules.ContactsModuleTC -->
+    </classes>
+  </test> <!-- AgileCRMtest2(failed) -->
+  <test thread-count="5" name="AgileCRMtest3(failed)">
+    <classes>
+      <class name="com.realestatecrm.modules.DealsModuleTC">
+        <methods>
+          <include name="deletDeal"/>
+          <include name="addDeals"/>
+          <include name="afterclass"/>
+        </methods>
+      </class> <!-- com.realestatecrm.modules.DealsModuleTC -->
+    </classes>
+  </test> <!-- AgileCRMtest3(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,4 +1,4 @@
-package com.OrangeHRM;
+package com.OrangeHRMTC;
 
 import java.time.Duration;
 
@@ -16,12 +16,12 @@ import com.google.common.base.Function;
 public class Util extends Baseclass {
 public static void waitTobeClickable(By element)
 {
-	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
 	wait.until(ExpectedConditions.elementToBeClickable(element));
 }
 public static void waitTobeVisible(By element)
 {
-	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(30));
 	wait.until(ExpectedConditions.visibilityOfElementLocated(element));
 }
 public static void fluentWait(final WebElement element)
@@ -52,4 +52,34 @@ public static void fluentWait(final WebElement element)
 		throw new Exception("Expected result:' "+Expectedresult+" 'is not matching to actual result:' "+ActualResult+" 'Test passed"); 
 	 }
  }
+ 
+          public static void click(By element)
+          {
+        	Util.waitTobeClickable(element);  
+        	driver.findElement(element).click();
+          }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

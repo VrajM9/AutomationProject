@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
+import com.OrangeHRMTC.Baseclass;
+import com.OrangeHRMTC.Util;
+
 public class JavaScriptExecutorEx extends Baseclass {
 
 	public static void main(String[] args) {

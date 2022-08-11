@@ -2,6 +2,8 @@ package com.OrangeHRM;
 
 import org.openqa.selenium.By;
 
+import com.OrangeHRMTC.Baseclass;
+
 public class AddEmployee extends Baseclass {
 	public static void addEmp(String firstName,String lastName )//,String id) 
 	{

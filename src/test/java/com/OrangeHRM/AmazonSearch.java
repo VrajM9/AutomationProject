@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import com.OrangeHRMTC.Baseclass;
+import com.OrangeHRMTC.Util;
+
 public class AmazonSearch extends Baseclass {
 
 	public static void main(String[] args) {

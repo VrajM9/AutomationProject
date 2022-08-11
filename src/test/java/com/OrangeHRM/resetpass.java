@@ -3,6 +3,8 @@ package com.OrangeHRM;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import com.OrangeHRMTC.Baseclass;
+
 public class resetpass extends Baseclass {
 	public static void rstpass(String Empname) throws Exception 
 	{

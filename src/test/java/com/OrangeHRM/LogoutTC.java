@@ -3,6 +3,8 @@ package com.OrangeHRM;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 
+import com.OrangeHRMTC.Util;
+
 public class LogoutTC extends LoginTesting{
 
 public static void Logout()

@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
-  </test> <!-- Test -->
+<groups>
+<run>
+<include name="agilecrmTC"></include>
+<exclude name="OrnagehrmTC"></exclude>
+</run>
+</groups>
+<listeners>
+<listener class-name="com.Listeners.TestListeners"></listener>
+</listeners>
+  <test thread-count="5" name="AgileCRMtest1" parallel="false" enabled="true" >
+  <parameter name="browser" value="chrome"></parameter>
+  <classes>
+  <class name="com.realestatecrm.modules.CompanyModuleTC"></class><!-- Company module TestCases -->
+  </classes>
+   </test>
+  <test thread-count="5" name="AgileCRMtest3" enabled="false" >
+  <classes>
+  <class name="com.realestatecrm.modules.DealsModuleTC"></class><!-- Deals module TestCases -->
+  </classes>
+  </test> 
+<test thread-count="5" name="AgileCRMtest2" enabled="false">
+  <classes>
+  <class name="com.realestatecrm.modules.ContactsModuleTC"></class><!-- contact module TestCases -->
+  </classes>
+   </test>
+  <test thread-count="5" name="OrnageHrmtest1">
+   <parameter name="username" value="Admin"></parameter>
+   <parameter name="password" value="admin123"></parameter>
+   <parameter name="browser" value="chrome"></parameter>
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"></parameter>
+    <parameter name="ifuser" value="false"></parameter>
+  <classes>
+  <class name="com.OrangeHRM.pmi.AddempTC"></class>
+  </classes>
+   </test>  
 </suite> <!-- Suite -->

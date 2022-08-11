@@ -3,6 +3,8 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import com.OrangeHRMTC.Baseclass;
+
 public class SearchEmployee extends Baseclass{
 	public static void srchEmp(String Empname,String id)
 	{
