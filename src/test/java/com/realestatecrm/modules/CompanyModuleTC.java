@@ -18,7 +18,7 @@ public class CompanyModuleTC extends Baseclass {
  @BeforeClass(groups=("agilecrmTC"))
  @Parameters({"browser"})
  public void beforeclass(String browser)
- {   String configPropery=System.getProperty("user.dir")+"/config_properties";
+ {   String configPropery=System.getProperty("user.dir")+"/config.properties";
 System.out.println(configPropery);	
  LoginPage loginpage=new LoginPage();
 	 launchBrowser(browser);
