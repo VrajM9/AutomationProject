@@ -1,12 +1,9 @@
 package com.realestatecrm.modules;
 
-import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.OrangeHRMTC.Baseclass;
 import com.OrangeHRMTC.Util;
 import com.realestatecrm.loginPages.LoginPage;
@@ -22,7 +19,6 @@ public class DocUpload extends Baseclass {
 		loginPage.login(username, password);
 
 	}
-
 	@SuppressWarnings("deprecation")
 	@Test
 	public void uploadDoc() {
