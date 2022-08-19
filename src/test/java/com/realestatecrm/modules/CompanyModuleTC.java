@@ -26,6 +26,7 @@ System.out.println(configPropery);
 	 driver.manage().window().maximize();
 	 driver.get(prop.getProperty("AgileCrmURL"));
 	 loginpage.login(prop.getProperty("AgileCrmUsername"),prop.getProperty("AgileCrmPassword"));
+	 
  }
  @Test(priority=1,groups=("agilecrmTC")) 
 public void companyModuleTc1()
