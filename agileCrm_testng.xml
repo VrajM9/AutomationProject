@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="agileCrm">
+		<parameter name="username" value="automation@yopmail.com"></parameter>
+		<parameter name="password" value="Test1234"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.realestatecrm.modules.DocUpload"></class>
+		</classes>
+	</test>
+</suite> <!-- Suite -->
